@@ -1,0 +1,9 @@
+{% for field123 in form %}
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <span class="text-danger small">{{ field123.error }}</span>
+        </div>
+        <label class="control-label col-sm-2">{{ field123.label_tag }}</label>
+        <div class="col-sm-10">{{ field123 }}</div>
+    </div>
+{% endfor %}

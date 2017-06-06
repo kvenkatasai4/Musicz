@@ -1,0 +1,15 @@
+{% extends "music/base.html" %}
+{% block title %}Songs{% endblock %}
+{% block body %}
+    <img src="{{ album.app_logo.url }}" style="width: 250px"/>
+    <h2>{{ album.artist }}</h2>
+    <h3>{{ album.album_title }}</h3>
+
+    {% for song in album.song_set.all %}
+        {{ song.song_title }}
+        {% if song.is_fav %}
+            <img src="http://i.imgur.com/b9b13Rd.png">
+        {% endif %}
+        </br>
+    {% endfor %}
+{% endblock %}
